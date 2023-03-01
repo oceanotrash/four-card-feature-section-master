@@ -1,0 +1,152 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Red: hsl(0, 78%, 62%)
+- Cyan: hsl(180, 62%, 55%)
+- Orange: hsl(34, 97%, 64%)
+- Blue: hsl(212, 86%, 64%)
+
+### Neutral
+
+- Very Dark Blue: hsl(234, 12%, 34%)
+- Grayish Blue: hsl(229, 6%, 66%)
+- Very Light Gray: hsl(0, 0%, 98%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Fonts
+
+- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 200, 400, 600 */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(0, 0%, 98%);
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  max-width: 500px;
+  text-align: center;
+  margin: 50px auto;
+}
+
+h1 {
+  font-weight: 200;
+}
+
+h1 span {
+  font-weight: 600;
+}
+
+p {
+  color: hsl(229, 6%, 66%);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1140px;
+}
+
+.box {
+  background-color: white;
+  padding: 40px;
+  margin: 15px;
+  width: 350px;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.box::after {
+    content: '';
+    background-color: blueviolet;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+}
+
+.box-red::after
+{
+    background-color: hsl(0, 78%, 62%);
+}
+
+.box-cyan::after
+{
+    background-color: hsl(180, 62%, 55%);
+}
+
+.box-orange::after
+{
+    background-color:  hsl(34, 97%, 64%);
+}
+
+.box-blue::after
+{
+    background-color: hsl(212, 86%, 64%);
+}
+
+.box-push
+{
+    transform: translateY(50%);
+}
+
+.box h3
+{
+    font-size: 1.5em;
+}
+
+.box img
+{
+    display: block;
+    margin-left: auto;
+}
+
+.box p
+{
+    font-size: .9em;
+    margin: 15px 0 40px;
+
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+
+@media(max-width: 760px)
+{
+    .box-push
+    {
+        transform: translateY(0);
+    }
+}
